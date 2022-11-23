@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Delete {{musician_list.first_name}} {{musician_list.last_name}}!!!</h1>
+    <form  method="post">
+      {% csrf_token %}
+      <input type="submit" name="submit" value="Delete">
+      <button type="button" name="button"><a href="{% url 'class_app:musicianDetail' pk=musician_list.pk %}">Cancel</a></button>
+    </form>
+  </body>
+</html>
